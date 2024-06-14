@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: #edf2f8;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+/* griddy start */
+.container {
+  display: grid;
+
+  grid-template-columns: 225px 225px 225px 225px 225px;
+  grid-template-rows: 350px 350px;
+  grid-gap: 20px;
+  width: fit-content;
+  padding: 20px;
+}
+.item {
+  padding: 15px;
+  border-radius: 10px;
+}
+.one {
+  grid-row-start: 1 span;
+  grid-column-start: 3 span;
+}
+.three {
+  grid-row-start: 2 span;
+}
+.five {
+  grid-column-start: 3 span;
+}
+/* griddy end */
+.one {
+  background-color: #733fc8;
+  background-image: url(bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.two {
+  background-color: #49556b;
+}
+.three {
+  background-color: #ffffff;
+}
+.four {
+  background-color: #ffffff;
+}
+.five {
+  background-color: #18202d;
+}
+
+blockquote {
+  font-size: 0.84rem;
+  color: hsla(0, 0%, 100%, 0.7);
+  text-decoration: red;
+}
+section {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: 2px solid black;
+}
+h2 {
+  color: white;
+  font-size: 1rem;
+}
+h1 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+span {
+  color: hsl(0, 0%, 100%, 0.5);
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.dark {
+  color: hsla(217, 19%, 35%, 0.5);
+}
+.darker {
+  color: hsl(219, 29%, 14%);
+}
+.darkest {
+  color: hsla(217, 19%, 35%, 0.5);
+}
+.dark-blockquote {
+  color: hsla(217, 19%, 35%, 0.7);
+}
+
+@media (max-width: 1224px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
